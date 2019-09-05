@@ -1,3 +1,5 @@
 export function getRandomColor() {
-  return '#' + ((Math.random() * 0xffffff) << 0).toString(16)
+  return (
+    '#' + (((1 << 24) * (Math.random() + 1)) | 0x696969).toString(16).substr(1)
+  )
 }
