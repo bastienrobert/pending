@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Monument Extended';
+  src: url('../assets/fonts/MonumentExtended-Ultrabold.eot');
+  src: url('../assets/fonts/MonumentExtended-Ultrabold.eot?#iefix')
+      format('embedded-opentype'),
+    url('../assets/fonts/MonumentExtended-Ultrabold.woff2') format('woff2'),
+    url('../assets/fonts/MonumentExtended-Ultrabold.woff') format('woff'),
+    url('../assets/fonts/MonumentExtended-Ultrabold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+html,
+body {
+  font-size: 14px;
+  font-weight: 400;
+  overflow: hidden;
+}
+
+.no-pointer-events,
+.no-pointer-events * {
+  pointer-events: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.routes {
+  position: fixed;
+  z-index: 2;
+}
+
+.page {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}

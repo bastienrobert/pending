@@ -1,0 +1,49 @@
+//////////////////////////
+//     BREAKPOINTS      //
+//////////////////////////
+
+$xs: 480;
+$sm: 768;
+$md: 992;
+$lg: 1200;
+$xl: 1441;
+$xxl: 1920;
+
+//////////////////////////
+//        COLORS        //
+//////////////////////////
+
+$black: #000;
+$white: #fff;
+
+//////////////////////////
+//         FONTS        //
+//////////////////////////
+
+$font-family: 'Monument Extended';
+$font-size: 18vw;
+
+//////////////////////////
+//        MIXINS        //
+//////////////////////////
+
+@mixin breakpoint($point) {
+  @media (min-width: $point + 'px') {
+    @content;
+  }
+}
+
+@mixin outline($color: $black) {
+  /* prettier-ignore */
+  text-shadow:
+   -1px -1px 0 $color,  
+    1px -1px 0 $color,
+    -1px 1px 0 $color,
+     1px 1px 0 $color;
+}
+
+@mixin print() {
+  @media print {
+    @content;
+  }
+}
