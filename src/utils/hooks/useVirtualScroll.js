@@ -12,7 +12,8 @@ export default function useVirtualScroll(handler, options = {}) {
     if (typeof window === 'undefined') return
 
     const eventListener = event => savedHandler.current(event)
-    import('virtual-scroll').then(VirtualScroll => {
+    import('virtual-scroll').then(module => {
+      const VirtualScroll = module.default
       virtualScroll.current = new VirtualScroll(options)
       virtualScroll.current.on(eventListener)
     })
