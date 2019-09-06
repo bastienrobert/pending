@@ -8,19 +8,21 @@ export default function SplitText({
   onLetterLeave,
   className
 }) {
-  const href = links[Math.floor(Math.random() * links.length)]
   return (
     <div className={className}>
-      {children.split('').map(l => (
-        <a
-          href={href}
-          rel="noopener, noreferrer"
-          target="_blank"
-          onMouseEnter={onLetterEnter}
-          onMouseLeave={onLetterLeave}>
-          {l}
-        </a>
-      ))}
+      {children.split('').map(l => {
+        const href = links[Math.floor(Math.random() * links.length)]
+        return (
+          <a
+            href={href}
+            rel="noopener, noreferrer"
+            target="_blank"
+            onMouseEnter={onLetterEnter}
+            onMouseLeave={onLetterLeave}>
+            {l}
+          </a>
+        )
+      })}
     </div>
   )
 }
