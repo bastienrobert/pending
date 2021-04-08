@@ -30,7 +30,7 @@ function Col({ children, innerRef, invert }) {
 
 export default function Home({ shouldBeVisible }) {
   if (typeof window === 'undefined') {
-    return <h1>bastienrobert.fr is coming soon!</h1>
+    return <h1>bastienrobert.dev is coming soon!</h1>
   }
 
   const hasBeenAnimated = useRef(false)
@@ -60,7 +60,7 @@ export default function Home({ shouldBeVisible }) {
       </Col>
       <Col innerRef={pushToElements}>robert</Col>
       <Col innerRef={pushToElements} invert>
-        is
+        portfolio
       </Col>
       <Col innerRef={pushToElements}>coming</Col>
       <Col innerRef={pushToElements} invert>
